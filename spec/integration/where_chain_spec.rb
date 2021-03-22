@@ -50,7 +50,7 @@ describe '#where.has' do
       author.comments.id > 0
     }
 
-    expect(relation).to match_sql_snapshot(variants: ['5.2'])
+    expect(relation).to match_sql_snapshot(variants: ['6.1.3'])
   end
 
   it 'wheres on an aliased association' do
@@ -58,7 +58,7 @@ describe '#where.has' do
       author.posts.id > 0
     }
 
-    expect(relation).to match_sql_snapshot(variants: ['5.2'])
+    expect(relation).to match_sql_snapshot(variants: ['6.1.3'])
   end
 
   it 'wheres on an aliased association with through' do
